@@ -19,7 +19,14 @@ $badword = $_POST["badword"];
     <div class="container d-flex  align-items-center justify-content-center pt-5 mt-5">
         <!-- variables printing by echo propriety -->
         <h1 class="border rounded-4 border-secondary p-3">
-            <?php echo "$paragraph $badword"; ?>
+            <?php echo $paragraph . " ";
+            // printed paragraph lenght with the proprety strlen  
+            $paragraphlenght = strlen($paragraph);
+            echo "$paragraphlenght";
+            // $sostitute = str_split($badword);
+            // var_dump($sostitute);
+            echo str_replace("$badword", "***", "$badword");
+            ?>
         </h1>
 
 
